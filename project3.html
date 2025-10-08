@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #back{
+            background-color: black;
+            height: 750px;
+            width:1500px;
+            position: absolute;
+           
+        }
+        ul li{
+            color: white;
+            list-style-type: none;
+            padding: 20px;
+            
+           
+        }
+        ul{
+            margin-top: 500px;
+        }
+        #up{
+            position: absolute;
+            background-color:white;
+            height: 800px;
+            width: 1500px;
+            
+            
+        }
+        #middle{
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            background-color: red;
+            border-radius: 0 0 80% 0;
+        }
+        #cross{
+            position: absolute;
+            margin-left: -25px;
+        }
+        #cr1{
+            width: 24px;
+            height:3px;
+            background-color: white;
+            margin-top: 50px;
+
+        }
+        #cr2{
+            width: 3px;
+            height:24px;
+            background-color: white;
+            margin-left: 10px;
+            margin-top: -12px;
+           
+
+        }
+
+        #line{
+          position: fixed;
+          padding: -10px;
+        }
+        #line1{
+            height: 2px; 
+            width: 22px; 
+            background-color: white; 
+            margin-top: 50px;
+            margin-left: 30px;
+        
+        }
+
+        #line2{
+            height: 3px; 
+            width: 22px; 
+            background-color: white; 
+            margin-top: -10px;
+            margin-left: 30px;
+        }
+        
+        #line3{
+            height: 2px; 
+            width: 22px; 
+            background-color: white; 
+            margin-top: -10px;
+            margin-left: 30px;
+        }
+
+
+
+    </style>
+   
+</head>
+<body>
+    <section>
+   <div id="back">
+    <ul>
+       
+        
+    <li>Home</li>
+    <li>About</li>
+    <li>Contact</li>
+</ul>
+   </div>
+</section>
+<section>
+    <div id="up">
+        <h1 style="margin-top: 100px; margin-left: 100px;">Amazing Article</h1>
+        <h3 style="margin-left: 100px;">Florin Pop</h3>
+        <pre style="font-family: 'Times New Roman', Times, serif; font-size: large; margin-left: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Iste saepe labore inventore quisquam possimus dolorum,
+provident non commodi sequi dolore nisi repudiandae eligendi 
+ratione cupiditate nulla totam! Explicabo voluptatum veniam officiis!
+Sit dolorum a facilis,cumque repudiandae itaque praesentium quasi. 
+Perferendis unde facilis illo exercitationem tenetur nam, est,quibusdam 
+modi itaque, consectetur dolores nihil laudantium quo? Dolorem, repellat! 
+Laborum, suscipit minus quidem ipsa facere possimus repellat nesciunt enim 
+dolor necessitatibus. In alias laudantium maiores voluptatem aliquid iure 
+magnam sed, illo vel quis, recusandae iste nulla labore expedita cum, assumenda 
+iusto hic dicta ab veritatis voluptatibus? Libero, nostrum error. Tempora, repellendus!
+            </pre>
+
+            <h3 style="margin-left: 100px;">My Dog</h3>
+            <img src="pubby.jfif" alt="" style="margin-left: 100px; height: 150px; width: 150px;">
+            <pre style="font-family: 'Times New Roman', Times, serif; font-size: large; margin-left: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Iste saepe labore inventore quisquam possimus dolorum,
+provident non commodi sequi dolore nisi repudiandae eligendi 
+ratione cupiditate nulla totam! Explicabo voluptatum veniam officiis!
+Sit dolorum a facilis,cumque repudiandae itaque praesentium quasi. 
+Perferendis unde facilis illo exercitationem tenetur nam, est,quibusdam 
+modi itaque, consectetur dolores nihil laudantium quo? Dolorem, repellat! 
+Laborum, suscipit minus quidem ipsa facere possimus repellat nesciunt enim 
+dolor necessitatibus. In alias laudantium maiores voluptatem aliquid iure 
+magnam sed, illo vel quis, recusandae iste nulla labore expedita cum, assumenda 
+iusto hic dicta ab veritatis voluptatibus? Libero, nostrum error. Tempora, repellendus!
+</pre>
+
+    </div>
+</section>
+<section>
+    <div id="middle">
+
+        <div id="cross">
+            <div id="cr1"></div>
+            <div id="cr2"></div>
+        </div>
+        <div id="line">
+
+
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+    let li=document.getElementById("line")
+    let up=document.getElementById("up")
+    let cr=document.getElementById("cross")
+    
+
+    li.addEventListener('click',()=>{
+
+        up.style.transformOrigin="left top"
+        
+        up.style.transform="rotate(-30deg)"
+        up.style.transition="2s"
+        li.style.transform="rotate(-180deg)"
+        cr.style.marginLeft="25px"
+
+
+       
+        
+    })
+
+    cr.addEventListener('click',()=>{
+        cr.style.marginLeft="-25px"
+        li.style.transform="rotate(0deg)"
+        up.style.transformOrigin="left top"
+         up.style.transform="rotate(0deg)"
+
+    })
+</script>
+   
+</body>
+</html>
